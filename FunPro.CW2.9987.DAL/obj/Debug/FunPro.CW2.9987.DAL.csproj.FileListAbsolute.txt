@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.dll.config
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.dll
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.pdb
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csprojAssemblyReference.cache
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csproj.CopyComplete
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.dll
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.pdb

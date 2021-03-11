@@ -34,6 +34,7 @@ namespace FunPro.CW2._9987.DAL
                     // TO-DO: find out what to do here
                 }
             }
+            //_score = value;
         }
         public string TestTaken
         {

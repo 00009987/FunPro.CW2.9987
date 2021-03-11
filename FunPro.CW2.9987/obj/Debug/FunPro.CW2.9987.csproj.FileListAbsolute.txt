@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.exe.config
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.exe
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.pdb
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.DAL.dll
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.DAL.pdb
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\FunPro.CW2.9987.DAL.dll.config
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.csprojAssemblyReference.cache
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.Form1.resources
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.Properties.Resources.resources
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.csproj.GenerateResource.cache
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.csproj.CopyComplete
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.exe
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.9987.pdb
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\RightJobDB.sdf
