@@ -8,6 +8,7 @@ namespace FunPro.CW2._9987.DAL
         {
             get
             {
+                // returning new sql connection with the defined property
                 return new SqlCeConnection(Properties.Settings.Default.ConnectionString);
             }
         }
