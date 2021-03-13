@@ -22,7 +22,7 @@ namespace FunPro.CW2._9987.DAL
         public List<Applicants> Search (int id, ByAttribute attribute)
         {
             // searching applicants by ID
-            return GetAllApplicants().Where(applicant => applicant.Score.Equals(id)).ToList();            
+            return GetAllApplicants().Where(applicant => applicant.Id.Equals(id)).ToList();            
         }
 
     }

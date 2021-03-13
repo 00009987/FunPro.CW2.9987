@@ -56,7 +56,7 @@ namespace FunPro.CW2._9987
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
-                MessageBox.Show("Please select a course");
+                MessageBox.Show("Please select an applicantc");
             else
             {
                 var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;
@@ -64,6 +64,39 @@ namespace FunPro.CW2._9987
                 LoadData();
             }
 
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cbxSort.SelectedIndex < 0)
+                MessageBox.Show("Select an attribute to sort by");
+            else
+            {
+                ByAttribute selectedAttribute;
+                selectedAttribute = ByAttribute.Score;
+                
+                dgv.DataMember = "";
+                dgv.DataSource = null;
+                dgv.DataSource = new ApplicantList().Sort(selectedAttribute);
+            }
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(nudApplicantId.Value <= 0)
+            {
+                MessageBox.Show("Provide a correct ID number;");
+            }
+            else
+            {
+                var selectedAttribute = ByAttribute.Id;
+                var selectedId = Convert.ToInt32(nudApplicantId.Value);
+
+                dgv.DataMember = "";
+                dgv.DataSource = null;
+                dgv.DataSource = new ApplicantList().Search(selectedId, selectedAttribute);
+            }            
         }
     }
 }
