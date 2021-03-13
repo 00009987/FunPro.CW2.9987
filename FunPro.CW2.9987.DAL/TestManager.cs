@@ -21,7 +21,7 @@ namespace FunPro.CW2._9987.DAL
                 $"'{test.TestQuestion1}', '{test.TestQuestion1Answer}'," +
                 $"'{test.TestQuestion2}', '{test.TestQuestion2Answer}'," +
                 $" '{test.TestQuestion3}', '{test.TestQuestion3Answer}')";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);
         }
         public void Update(Tests test)
         {
@@ -34,12 +34,12 @@ namespace FunPro.CW2._9987.DAL
                 $"ts_q3_9987 = '{test.TestQuestion3}', " +
                 $"ts_q3_answer_9987 = '{test.TestQuestion3Answer}' " +
                 $"WHERE ts_id_9987 = '{test.Id}'";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);
         }
         public void Delete(int id)
         {
             var sql = $"DELETE FROM Tests WHERE ts_id_9987 = '{id}'";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);
         }
         public List<Tests> GetAllTests(Tests test)
         {
@@ -85,7 +85,7 @@ namespace FunPro.CW2._9987.DAL
 
         //TO-DO: Persist tests’ information in the database
 
-        public void SqlExecuteHelper(string sql)
+        public void SqlExecuter(string sql)
         {
             var conn = Connection;
             try

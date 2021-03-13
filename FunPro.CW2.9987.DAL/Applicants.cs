@@ -29,12 +29,12 @@ namespace FunPro.CW2._9987.DAL
             get => _score;
             set
             {
-                if (true)
+                if (value < 0)
                 {
-                    // TO-DO: find out what to do here
+                    throw new Exception("The score cannot be less than 0");                    
                 }
-            }
-            //_score = value;
+                _score = value;
+            }            
         }
         public string TestTaken
         {

@@ -13,7 +13,7 @@ namespace FunPro.CW2._9987.DAL
         {
             var sql = $"INSERT INTO Applicants (ap_name_9987, ap_score_9987, ap_tests_taken_9987)" +
                 $"VALUES('{applicant.Name}', '{applicant.Score}', '{applicant.TestTaken}')";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);            
         }
         public void Update(Applicants applicant)
         {
@@ -22,15 +22,15 @@ namespace FunPro.CW2._9987.DAL
                 $"ap_score_9987 = '{applicant.Score}'," +
                 $"ap_tests_taken_9987 = '{applicant.TestTaken}'," +
                 $"WHERE ap_id_9987 = '{applicant.Id}'";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);
         }
         public void Delete(int id)
         {
             var sql = $"DELETE FORM Applicants WHERE ap_id_9987 = '{id}'";
-            SqlExecuteHelper(sql);
+            SqlExecuter(sql);
         }
         public List<Applicants> GetAllApplicants()
-        {
+        {            
             var conn = Connection;
             var applicants = new List<Applicants>();
             try
@@ -64,11 +64,9 @@ namespace FunPro.CW2._9987.DAL
             return applicants;
         }
 
-        // TO-DO: Persist applicants’ information in the database
-        // TO-DO: Allow sorting the applicants by score
-        // TO-DO: Allow fast searching for an applicant by ID        
+        // TO-DO: Persist applicants’ information in the database        
 
-        public void SqlExecuteHelper(string sql)
+        public void SqlExecuter(string sql)
         {
             var conn = Connection;
             try
