@@ -27,5 +27,10 @@ namespace FunPro.CW2._9987
             // showing About section
             new AboutForm().ShowDialog();
         }
+
+        private void allApplicantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyForms.GetForm<ApplicantListForm>().Show();
+        }
     }
 }
