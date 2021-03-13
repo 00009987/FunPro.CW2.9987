@@ -16,3 +16,4 @@ C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\bin\Debug\RightJobDB.
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.ParentForm.resources
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.AboutForm.resources
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.ApplicantListForm.resources
+C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.ApplicantEditForm.resources

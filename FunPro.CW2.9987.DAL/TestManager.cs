@@ -33,12 +33,12 @@ namespace FunPro.CW2._9987.DAL
                 $"ts_q2_answer_9987 = '{test.TestQuestion2Answer}', " +
                 $"ts_q3_9987 = '{test.TestQuestion3}', " +
                 $"ts_q3_answer_9987 = '{test.TestQuestion3Answer}' " +
-                $"WHERE ts_id_9987 = '{test.Id}'";
+                $"WHERE ts_id_9987 = {test.Id}";
             SqlExecuter(sql);
         }
         public void Delete(int id)
         {
-            var sql = $"DELETE FROM Tests WHERE ts_id_9987 = '{id}'";
+            var sql = $"DELETE FROM Tests WHERE ts_id_9987 = {id}";
             SqlExecuter(sql);
         }
         public List<Tests> GetAllTests(Tests test)
@@ -47,7 +47,7 @@ namespace FunPro.CW2._9987.DAL
             var tests = new List<Tests>();
             try
             {
-                var sql = $"SELECT ts_name_9987, ts_q1_9987, ts_q1_answer_9987, " +
+                var sql = $"SELECT ts_id_9987, ts_name_9987, ts_q1_9987, ts_q1_answer_9987, " +
                     $"ts_q2_9987, ts_q2_answer_9987, " +
                     $"ts_q3_9987, ts_q3_answer_9987 FROM Tests";
                 var command = new SqlCeCommand(sql, conn);
@@ -58,6 +58,7 @@ namespace FunPro.CW2._9987.DAL
                 {
                     var t = new Tests
                     {
+                        Id = Convert.ToInt32(rdr.GetValue(0)),
                         TestName = Convert.ToString(rdr.GetValue(1)),
                         TestQuestion1 = Convert.ToString(rdr.GetValue(2)),
                         TestQuestion1Answer = Convert.ToString(rdr.GetValue(3)),
@@ -81,10 +82,7 @@ namespace FunPro.CW2._9987.DAL
                 }
             }
             return tests;
-        }
-
-        //TO-DO: Persist tests’ information in the database
-
+        }        
         public void SqlExecuter(string sql)
         {
             var conn = Connection;

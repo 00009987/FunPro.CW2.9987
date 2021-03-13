@@ -85,6 +85,7 @@
             this.newApplicantToolStripMenuItem.Name = "newApplicantToolStripMenuItem";
             this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.newApplicantToolStripMenuItem.Text = "New Applicant";
+            this.newApplicantToolStripMenuItem.Click += new System.EventHandler(this.newApplicantToolStripMenuItem_Click);
             // 
             // allApplicantsToolStripMenuItem
             // 

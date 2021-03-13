@@ -21,7 +21,7 @@ namespace FunPro.CW2._9987.DAL
                 {
                     throw new Exception("Name cannot be empty.");
                 }
-                _name = Name;
+                _name = value;
             }
         }
         public int Score
@@ -54,7 +54,7 @@ namespace FunPro.CW2._9987.DAL
         {
             Name = name;
             Score = score;
-            TestTaken = TestTaken;
+            TestTaken = testTaken;
         }
     }
 }

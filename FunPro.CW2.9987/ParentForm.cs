@@ -30,7 +30,14 @@ namespace FunPro.CW2._9987
 
         private void allApplicantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // showing all applicants
             MyForms.GetForm<ApplicantListForm>().Show();
+        }
+
+        private void newApplicantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // showing applicant creating/upadting form
+            new ApplicantEditForm().CreateNewApplicant();
         }
     }
 }

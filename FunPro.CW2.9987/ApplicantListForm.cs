@@ -29,13 +29,41 @@ namespace FunPro.CW2._9987
             LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             dgv.DataMember = "";
             dgv.DataSource = null;
             dgv.DataSource = new ApplicantList().GetAllApplicants();
         }
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new ApplicantEditForm().CreateNewApplicant();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select an applicant");
+            else
+            {
+                var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;
+                new ApplicantEditForm().UpdateApplicant(applicant);
+            }
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select a course");
+            else
+            {
+                var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;
+                new ApplicantManager().Delete(applicant.Id);
+                LoadData();
+            }
+
+        }
     }
 }

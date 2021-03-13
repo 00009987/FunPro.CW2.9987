@@ -11,22 +11,22 @@ namespace FunPro.CW2._9987.DAL
     {
         public void Create(Applicants applicant)
         {
-            var sql = $"INSERT INTO Applicants (ap_name_9987, ap_score_9987, ap_tests_taken_9987)" +
+            var sql = $"INSERT INTO Applicants (ap_name_9987, ap_score_9987, ap_tests_taken_9987) " +
                 $"VALUES('{applicant.Name}', '{applicant.Score}', '{applicant.TestTaken}')";
             SqlExecuter(sql);            
         }
         public void Update(Applicants applicant)
         {
-            var sql = $"UPDATE Applicants SET" +
+            var sql = $"UPDATE Applicants SET " +
                 $"ap_name_9987 = '{applicant.Name}'," +
                 $"ap_score_9987 = '{applicant.Score}'," +
-                $"ap_tests_taken_9987 = '{applicant.TestTaken}'," +
-                $"WHERE ap_id_9987 = '{applicant.Id}'";
+                $"ap_tests_taken_9987 = '{applicant.TestTaken}' " +
+                $"WHERE ap_id_9987 = {applicant.Id}";
             SqlExecuter(sql);
         }
         public void Delete(int id)
         {
-            var sql = $"DELETE FORM Applicants WHERE ap_id_9987 = '{id}'";
+            var sql = $"DELETE FROM Applicants WHERE ap_id_9987 = {id}";
             SqlExecuter(sql);
         }
         public List<Applicants> GetAllApplicants()
@@ -35,7 +35,7 @@ namespace FunPro.CW2._9987.DAL
             var applicants = new List<Applicants>();
             try
             {
-                var sql = "SELECT ap_name_9987, ap_score_9987, ap_tests_taken_9987 FROM Applicants";
+                var sql = "SELECT ap_id_9987, ap_name_9987, ap_score_9987, ap_tests_taken_9987 FROM Applicants";
                 var command = new SqlCeCommand(sql, conn);
                 conn.Open();
                 var rdr = command.ExecuteReader();
@@ -43,6 +43,7 @@ namespace FunPro.CW2._9987.DAL
                 {
                     var applicant = new Applicants
                     {
+                        Id = Convert.ToInt32(rdr.GetValue(0)),
                         Name = Convert.ToString(rdr.GetValue(1)),
                         Score = Convert.ToInt32(rdr.GetValue(2)),
                         TestTaken = Convert.ToString(rdr.GetValue(3))
@@ -62,10 +63,7 @@ namespace FunPro.CW2._9987.DAL
                 }
             }
             return applicants;
-        }
-
-        // TO-DO: Persist applicants’ information in the database        
-
+        }             
         public void SqlExecuter(string sql)
         {
             var conn = Connection;
