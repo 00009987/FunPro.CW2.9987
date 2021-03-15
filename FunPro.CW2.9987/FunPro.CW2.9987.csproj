@@ -78,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestEditForm.Designer.cs">
+      <DependentUpon>TestEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestEditForm.resx">
+      <DependentUpon>TestEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestListForm.resx">
       <DependentUpon>TestListForm.cs</DependentUpon>
     </EmbeddedResource>

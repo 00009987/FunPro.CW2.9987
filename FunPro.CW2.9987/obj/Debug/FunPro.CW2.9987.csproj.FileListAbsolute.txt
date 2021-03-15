@@ -18,3 +18,4 @@ C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2.
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.ApplicantListForm.resources
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.ApplicantEditForm.resources
 c:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.TestListForm.resources
+c:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987\obj\Debug\FunPro.CW2._9987.TestEditForm.resources

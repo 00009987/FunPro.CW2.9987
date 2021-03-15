@@ -48,5 +48,21 @@ namespace FunPro.CW2._9987
                 LoadData();
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new TestEditForm().CreateNewTest();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select a test");
+            else
+            {
+                var test = (Tests)dgv.SelectedRows[0].DataBoundItem;                
+                new TestEditForm().UpdateTest(test);
+            }
+        }
     }
 }

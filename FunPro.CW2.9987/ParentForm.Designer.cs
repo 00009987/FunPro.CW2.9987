@@ -83,14 +83,14 @@
             // newApplicantToolStripMenuItem
             // 
             this.newApplicantToolStripMenuItem.Name = "newApplicantToolStripMenuItem";
-            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.newApplicantToolStripMenuItem.Text = "New Applicant";
             this.newApplicantToolStripMenuItem.Click += new System.EventHandler(this.newApplicantToolStripMenuItem_Click);
             // 
             // allApplicantsToolStripMenuItem
             // 
             this.allApplicantsToolStripMenuItem.Name = "allApplicantsToolStripMenuItem";
-            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.allApplicantsToolStripMenuItem.Text = "All Applicants";
             this.allApplicantsToolStripMenuItem.Click += new System.EventHandler(this.allApplicantsToolStripMenuItem_Click);
             // 
@@ -108,6 +108,7 @@
             this.newTestToolStripMenuItem.Name = "newTestToolStripMenuItem";
             this.newTestToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.newTestToolStripMenuItem.Text = "New Test";
+            this.newTestToolStripMenuItem.Click += new System.EventHandler(this.newTestToolStripMenuItem_Click);
             // 
             // allTestsToolStripMenuItem
             // 

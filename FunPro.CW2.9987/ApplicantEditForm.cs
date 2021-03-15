@@ -40,7 +40,7 @@ namespace FunPro.CW2._9987
         {
             Mode = FormMode.Update;
             Applicant = applicant;
-            ShowCourseInControls();
+            ShowApplicantInControls();
             MdiParent = MyForms.GetForm<ParentForm>();
             Show();
         }
@@ -49,7 +49,7 @@ namespace FunPro.CW2._9987
         {
         }
 
-        private void ShowCourseInControls()
+        private void ShowApplicantInControls()
         {
             tbxName.Text = Applicant.Name;
             nudScore.Value = Applicant.Score;

@@ -36,7 +36,7 @@ namespace FunPro.CW2._9987
 
         private void newApplicantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // showing applicant creating/upadting form
+            // showing applicant-create/update form
             new ApplicantEditForm().CreateNewApplicant();
         }
 
@@ -44,6 +44,12 @@ namespace FunPro.CW2._9987
         {
             // showing all the tests
             MyForms.GetForm<TestListForm>().Show();
+        }
+
+        private void newTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // showing applicant-create/update form            
+            new TestEditForm().CreateNewTest();
         }
     }
 }
