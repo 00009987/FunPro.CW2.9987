@@ -225,7 +225,7 @@
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(148, 23);
             this.lblScore.TabIndex = 12;
-            this.lblScore.Text = "Applicant Score";
+            this.lblScore.Text = "Sort by";
             // 
             // cbxSort
             // 

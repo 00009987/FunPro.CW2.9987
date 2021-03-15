@@ -64,5 +64,51 @@ namespace FunPro.CW2._9987
                 new TestEditForm().UpdateTest(test);
             }
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (cbxSort.SelectedIndex < 0)
+                MessageBox.Show("Select an attribute to sort by");
+            else
+            {
+                ByAttribute selectedAttribute;
+                selectedAttribute = ByAttribute.TestName;
+
+                dgv.DataMember = "";
+                dgv.DataSource = null;
+                dgv.DataSource = new TestList().Sort(selectedAttribute);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (cbxSearch.SelectedIndex < 0)
+                MessageBox.Show("Select an attribute to search by");
+            else if (string.IsNullOrWhiteSpace(tbxSearch.Text))
+                MessageBox.Show("Provide the search term");
+            else
+            {
+                var selectedAttribute = new ByAttribute();                              
+
+                if(cbxSearch.SelectedIndex == 0)
+                {
+                    selectedAttribute = ByAttribute.TestName;
+                }else if (cbxSearch.SelectedIndex == 1)
+                {
+                    selectedAttribute = ByAttribute.Question1;
+                }else if (cbxSearch.SelectedIndex == 2)
+                {
+                    selectedAttribute = ByAttribute.Question2;
+                }
+                else
+                {
+                    selectedAttribute = ByAttribute.Question3;
+                }
+
+                dgv.DataMember = "";
+                dgv.DataSource = null;
+                dgv.DataSource = new TestList().Search(tbxSearch.Text, selectedAttribute);
+            }
+        }
     }
 }

@@ -10,6 +10,9 @@ namespace FunPro.CW2._9987.DAL
     {
         Score,
         Id,
-        TestName
+        TestName,
+        Question1,
+        Question2,
+        Question3
     }
 }

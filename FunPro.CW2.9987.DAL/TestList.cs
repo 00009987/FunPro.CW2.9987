@@ -19,16 +19,22 @@ namespace FunPro.CW2._9987.DAL
             return GetAllTests().OrderBy(test => test.TestName).ToList();                           
         }
 
-        public List<Tests> Search(string value, int id, ByAttribute attribute)
+        public List<Tests> Search(string value, ByAttribute attribute)
         {
             switch (attribute)
-            {
-                case ByAttribute.Id:
-                    // searching test by id
-                    return GetAllTests().Where(test => test.Id.Equals(id)).ToList();
+            {                
                 case ByAttribute.TestName:
                     // searching test by its name
                     return GetAllTests().Where(test => test.TestName.ToUpper().Contains(value.ToUpper())).ToList();
+                case ByAttribute.Question1:
+                    // searching test by first question 1
+                    return GetAllTests().Where(test => test.TestQuestion1.ToUpper().Contains(value.ToUpper())).ToList();
+                case ByAttribute.Question2:
+                    // searching test by first question 2
+                    return GetAllTests().Where(test => test.TestQuestion2.ToUpper().Contains(value.ToUpper())).ToList();
+                case ByAttribute.Question3:
+                    // searching test by first question 3
+                    return GetAllTests().Where(test => test.TestQuestion3.ToUpper().Contains(value.ToUpper())).ToList();
             }
             
             return null;
