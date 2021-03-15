@@ -57,7 +57,7 @@ namespace FunPro.CW2._9987.DAL
         }
 
         // method to get all the tests from the database
-        public List<Tests> GetAllTests(Tests test)
+        public List<Tests> GetAllTests()
         {
             var conn = Connection;
 

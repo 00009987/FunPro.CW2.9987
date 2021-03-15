@@ -106,14 +106,15 @@
             // newTestToolStripMenuItem
             // 
             this.newTestToolStripMenuItem.Name = "newTestToolStripMenuItem";
-            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.newTestToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.newTestToolStripMenuItem.Text = "New Test";
             // 
             // allTestsToolStripMenuItem
             // 
             this.allTestsToolStripMenuItem.Name = "allTestsToolStripMenuItem";
-            this.allTestsToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.allTestsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.allTestsToolStripMenuItem.Text = "All Tests";
+            this.allTestsToolStripMenuItem.Click += new System.EventHandler(this.allTestsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

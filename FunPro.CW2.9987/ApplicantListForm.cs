@@ -56,7 +56,7 @@ namespace FunPro.CW2._9987
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
-                MessageBox.Show("Please select an applicantc");
+                MessageBox.Show("Please select an applicant");
             else
             {
                 var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;

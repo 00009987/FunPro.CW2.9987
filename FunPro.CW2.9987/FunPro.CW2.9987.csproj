@@ -78,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestListForm.Designer.cs">
+      <DependentUpon>TestListForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,7 +105,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestListForm.resx">
+      <DependentUpon>TestListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\FunPro.CW2._9987.DAL.Applicants.datasource" />
+    <None Include="Properties\DataSources\FunPro.CW2._9987.DAL.Tests.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

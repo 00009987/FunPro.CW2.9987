@@ -30,7 +30,7 @@ namespace FunPro.CW2._9987
 
         private void allApplicantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // showing all applicants
+            // showing all the applicants
             MyForms.GetForm<ApplicantListForm>().Show();
         }
 
@@ -38,6 +38,12 @@ namespace FunPro.CW2._9987
         {
             // showing applicant creating/upadting form
             new ApplicantEditForm().CreateNewApplicant();
+        }
+
+        private void allTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // showing all the tests
+            MyForms.GetForm<TestListForm>().Show();
         }
     }
 }

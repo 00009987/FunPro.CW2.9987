@@ -57,6 +57,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TestList.cs" />
     <Compile Include="TestManager.cs" />
     <Compile Include="Tests.cs" />
   </ItemGroup>

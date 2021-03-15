@@ -9,6 +9,7 @@ namespace FunPro.CW2._9987.DAL
     public enum ByAttribute
     {
         Score,
-        Id
+        Id,
+        TestName
     }
 }
