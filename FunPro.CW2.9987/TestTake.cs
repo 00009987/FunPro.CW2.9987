@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FunPro.CW2._9987.DAL;
-using System.Data.SqlServerCe;
 
 namespace FunPro.CW2._9987
 {
@@ -32,8 +31,16 @@ namespace FunPro.CW2._9987
         {
             MdiParent = MyForms.GetForm<ParentForm>();
             lblApplicantName.Text = name;                                    
-            cbxTestName.DataSource = new TestManager().GetAllTests();
+            cbxTestName.DataSource = new TestManager().GetAllTests();            
             Show();
+        }
+
+        private void cbxTestName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var questions = new TestManager().GetQuestionsAndAnswers(cbxTestName.Text);
+            lblQuestion1.Text = questions.TestQuestion1;
+            lblQuestion2.Text = questions.TestQuestion2;
+            lblQuestion3.Text = questions.TestQuestion3;
         }
     }
 }

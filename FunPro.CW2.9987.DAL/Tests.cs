@@ -139,6 +139,25 @@ namespace FunPro.CW2._9987.DAL
         // declaring empty Tests constructor
         public Tests() { }
 
+        // declaring constructor with only name var
+        public Tests(string testName)
+        {
+            TestName = testName;
+        }
+
+        // declaring constructor with 6 parameters
+        public Tests(string testQuestion1, string testQuestion1Answer, string testQuestion2, string testQuestion2Answer, string testQuestion3, string testQuestion3Answer)
+        {
+            // setting received parameters to the variables accordingly            
+            TestQuestion1 = testQuestion1;
+            TestQuestion1Answer = testQuestion1Answer;
+            TestQuestion2 = testQuestion2;
+            TestQuestion2Answer = testQuestion2Answer;
+            TestQuestion3 = testQuestion3;
+            TestQuestion3Answer = testQuestion3Answer;
+        }
+
+
         // declaring Tests constuctor with required parameters
         public Tests(string testName, string testQuestion1, string testQuestion1Answer, string testQuestion2, string testQuestion2Answer, string testQuestion3, string testQuestion3Answer)
         {
@@ -150,6 +169,10 @@ namespace FunPro.CW2._9987.DAL
             TestQuestion2Answer = testQuestion2Answer;
             TestQuestion3 = testQuestion3;
             TestQuestion3Answer = testQuestion3Answer;
+        }
+        public override string ToString()
+        {
+            return TestName;
         }
     }
 }

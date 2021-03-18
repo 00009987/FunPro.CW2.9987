@@ -76,12 +76,20 @@ namespace FunPro.CW2._9987
             try
             {
                 GrabUserInput();
-                var manager = new TestManager();
-                if (Mode == FormMode.CreateNew)
+                var manager = new TestManager();                
+                if (Mode == FormMode.CreateNew && manager.CheckTestName(Test.TestName))
+                {
                     manager.Create(Test);
+                }
+                else if(manager.CheckTestName(Test.TestName))
+                {                    
+                   manager.Update(Test);
+                }
                 else
-                    manager.Update(Test);
-
+                {
+                    MessageBox.Show("This name of the test already exists in the database. Please try another name.");
+                }
+                    
                 MyForms.GetForm<TestListForm>().LoadData();
                 Close();
             }

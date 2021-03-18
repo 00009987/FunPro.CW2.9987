@@ -41,10 +41,10 @@
             this.lblQuestion1 = new System.Windows.Forms.Label();
             this.lblQ1 = new System.Windows.Forms.Label();
             this.cbxTestName = new System.Windows.Forms.ComboBox();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTest = new System.Windows.Forms.Label();
             this.lblApplicantName = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
-            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +166,11 @@
             this.cbxTestName.Size = new System.Drawing.Size(165, 24);
             this.cbxTestName.TabIndex = 33;
             this.cbxTestName.ValueMember = "Id";
+            this.cbxTestName.SelectedIndexChanged += new System.EventHandler(this.cbxTestName_SelectedIndexChanged);
+            // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // lblTest
             // 
@@ -185,7 +190,7 @@
             this.lblApplicantName.Name = "lblApplicantName";
             this.lblApplicantName.Size = new System.Drawing.Size(49, 16);
             this.lblApplicantName.TabIndex = 31;
-            this.lblApplicantName.Text = "Name";            
+            this.lblApplicantName.Text = "Name";
             // 
             // lbl
             // 
@@ -196,10 +201,6 @@
             this.lbl.Size = new System.Drawing.Size(104, 16);
             this.lbl.TabIndex = 30;
             this.lbl.Text = "Applicant Name";
-            // 
-            // testsBindingSource
-            // 
-            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // TestTake
             // 
@@ -222,7 +223,7 @@
             this.Controls.Add(this.lblApplicantName);
             this.Controls.Add(this.lbl);
             this.Name = "TestTake";
-            this.Text = "TestTake";            
+            this.Text = "TestTake";
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

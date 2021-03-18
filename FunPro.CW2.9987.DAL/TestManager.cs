@@ -113,6 +113,100 @@ namespace FunPro.CW2._9987.DAL
             return tests;
         }
 
+        // method to check if the test with the same name is tried to be created
+        public Boolean CheckTestName(string name)
+        {
+            var conn = Connection;
+            // declearing & initializing tests list
+            var testNames = new List<String>();
+
+            try
+            {
+                var sql = $"SELECT ap_name_9987 FROM Applicants";             
+                var command = new SqlCeCommand(sql, conn);
+                // opening the sql connection
+                conn.Open();
+                // declearing and initializing reader
+                var rdr = command.ExecuteReader();
+
+                // reading from database
+                while (rdr.Read())
+                {
+                    var t = Convert.ToString(rdr.GetValue(0));
+                    
+                    testNames.Add(t);
+                }                          
+            }
+            catch (Exception ex)
+            {
+                // if there is an error during the prosses, show the proper error message
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                // closing the connection
+                if (conn.State != ConnectionState.Closed)
+                {
+                    conn.Close();
+                }
+            }            
+
+            return !testNames.Contains((name));
+        }
+
+        // method to get questions & answers according to the test name
+        public Tests GetQuestionsAndAnswers(string name)
+        {
+            var conn = Connection;            
+
+            try
+            {
+                // select sql statement to work with database
+                var sql = $"SELECT ts_q1_9987, ts_q1_answer_9987, " +
+                    $"ts_q2_9987, ts_q2_answer_9987, " +
+                    $"ts_q3_9987, ts_q3_answer_9987 FROM Tests " +
+                    $"WHERE ts_name_9987 = '{name}'";
+                var command = new SqlCeCommand(sql, conn);
+                // opening the sql connection
+                conn.Open();
+                // declearing and initializing reader
+                var rdr = command.ExecuteReader();
+
+                // reading from database
+                if (rdr.Read())
+                {
+                    // declearing and initializing new test with proper parameters
+                    var t = new Tests
+                    {                        
+                        TestQuestion1 = Convert.ToString(rdr.GetValue(0)),
+                        TestQuestion1Answer = Convert.ToString(rdr.GetValue(1)),
+                        TestQuestion2 = Convert.ToString(rdr.GetValue(2)),
+                        TestQuestion2Answer = Convert.ToString(rdr.GetValue(3)),
+                        TestQuestion3 = Convert.ToString(rdr.GetValue(4)),
+                        TestQuestion3Answer = Convert.ToString(rdr.GetValue(5))
+                    };
+
+                    return t;
+                }
+            }
+            catch (Exception ex)
+            {
+                // if there is an error during the prosses, show the proper error message
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                // closing the connection
+                if (conn.State != ConnectionState.Closed)
+                {
+                    conn.Close();
+                }
+            }
+
+            // if something went wrong, return null
+            return null;
+        }
+
         // helper method to execute sql statements
         public void SqlExecuter(string sql)
         {
