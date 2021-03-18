@@ -165,6 +165,7 @@
             this.btnTakeTest.TabIndex = 8;
             this.btnTakeTest.Text = "Take Test";
             this.btnTakeTest.UseVisualStyleBackColor = true;
+            this.btnTakeTest.Click += new System.EventHandler(this.btnTakeTest_Click);
             // 
             // lblApplicantId
             // 

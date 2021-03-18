@@ -98,5 +98,16 @@ namespace FunPro.CW2._9987
                 dgv.DataSource = new ApplicantList().Search(selectedId, selectedAttribute);
             }            
         }
+
+        private void btnTakeTest_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select an applicant");
+            else
+            {
+                var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;                
+                new TestTake().ShowTests(applicant.Name);                
+            }
+        }
     }
 }

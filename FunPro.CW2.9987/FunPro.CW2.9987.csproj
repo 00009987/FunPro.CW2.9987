@@ -90,6 +90,12 @@
     <Compile Include="TestListForm.Designer.cs">
       <DependentUpon>TestListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestTake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTake.Designer.cs">
+      <DependentUpon>TestTake.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestListForm.resx">
       <DependentUpon>TestListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTake.resx">
+      <DependentUpon>TestTake.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\FunPro.CW2._9987.DAL.Applicants.datasource" />
     <None Include="Properties\DataSources\FunPro.CW2._9987.DAL.Tests.datasource" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbxAnswer3 = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@
             this.lblTest = new System.Windows.Forms.Label();
             this.lblApplicantName = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -55,6 +58,7 @@
             this.btnCancel.TabIndex = 44;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -152,6 +156,7 @@
             // 
             // cbxTestName
             // 
+            this.cbxTestName.DataSource = this.testsBindingSource;
             this.cbxTestName.DisplayMember = "TestName";
             this.cbxTestName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,7 +165,7 @@
             this.cbxTestName.Name = "cbxTestName";
             this.cbxTestName.Size = new System.Drawing.Size(165, 24);
             this.cbxTestName.TabIndex = 33;
-            this.cbxTestName.ValueMember = "TestName";
+            this.cbxTestName.ValueMember = "Id";
             // 
             // lblTest
             // 
@@ -180,7 +185,7 @@
             this.lblApplicantName.Name = "lblApplicantName";
             this.lblApplicantName.Size = new System.Drawing.Size(49, 16);
             this.lblApplicantName.TabIndex = 31;
-            this.lblApplicantName.Text = "Name";
+            this.lblApplicantName.Text = "Name";            
             // 
             // lbl
             // 
@@ -191,6 +196,10 @@
             this.lbl.Size = new System.Drawing.Size(104, 16);
             this.lbl.TabIndex = 30;
             this.lbl.Text = "Applicant Name";
+            // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // TestTake
             // 
@@ -213,7 +222,8 @@
             this.Controls.Add(this.lblApplicantName);
             this.Controls.Add(this.lbl);
             this.Name = "TestTake";
-            this.Text = "TestTake";
+            this.Text = "TestTake";            
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +246,6 @@
         private System.Windows.Forms.Label lblTest;
         private System.Windows.Forms.Label lblApplicantName;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.BindingSource testsBindingSource;
     }
 }
