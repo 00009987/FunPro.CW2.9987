@@ -23,22 +23,27 @@ namespace FunPro.CW2._9987
             Close();
         }
 
+        // declearing global variables to store test takers data
         private int applicantId;
         private int applicantScore;
-
-        public Applicants Applicant { get; set; }
-
-        public Tests Test { get; set; }        
-
-        public void ShowTests(string name, int id, int score)
+        private string applicantTests;
+        private string currentTest;
+        
+        public void ShowTests(string name, int id, int score, string takenTests)
         {
+            // showing the TestTake form
             MdiParent = MyForms.GetForm<ParentForm>();
-            lblApplicantName.Text = name;                                    
+            // setting user's name to label
+            lblApplicantName.Text = name;  
+            // setting datasource to the test combobox
             cbxTestName.DataSource = new TestManager().GetAllTests();            
             Show();
 
+            // setting private global variables to the parameters of the test taker
             applicantId = id;
             applicantScore = score;
+            applicantTests = takenTests;
+            currentTest = cbxTestName.Text;
         }
 
         private void cbxTestName_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,9 +61,12 @@ namespace FunPro.CW2._9987
             applicantScore += points;
             new ApplicantManager().UpdateScore(applicantId, applicantScore);
 
+            // updating taken tests of the user
+            UpdateTakenTest();
+
             // showing how many points user got and refreshing applicant list form
             MessageBox.Show($"You solved {points} questions correctly, and gained {points} points.\n" +
-                $"To see the updated scores, please click on Refresh.");
+                $"To see the updated information, please click on Refresh.");
             Close();                 
         }
 
@@ -83,6 +91,15 @@ namespace FunPro.CW2._9987
             }            
 
             return point;
+        }
+        
+        public void UpdateTakenTest()
+        {            
+            string[] arrTests = applicantTests.Split(' ');
+            List<string> TakenTests = arrTests.OfType<string>().ToList();
+            TakenTests.Add(currentTest);
+            arrTests = TakenTests.ToArray();
+            new ApplicantManager().UpdateTestTaken(applicantId, string.Join(",", arrTests));
         }
     }
 }

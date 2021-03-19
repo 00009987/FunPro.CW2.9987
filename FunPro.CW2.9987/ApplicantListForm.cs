@@ -102,11 +102,22 @@ namespace FunPro.CW2._9987
         private void btnTakeTest_Click(object sender, EventArgs e)
         {
             if (dgv.SelectedRows.Count == 0)
+            {
+                // if applicant is not selected, show corresponging message
                 MessageBox.Show("Please select an applicant");
+            }                
+            else if (new TestManager().GetAllTests().Count == 0)
+            {
+                // if no tests, show message
+                MessageBox.Show("There are no tests to take. Please add some tests first.");
+
+                // showing all the tests
+                MyForms.GetForm<TestListForm>().Show();
+            }
             else
             {
                 var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;                
-                new TestTake().ShowTests(applicant.Name, applicant.Id, applicant.Score);                
+                new TestTake().ShowTests(applicant.Name, applicant.Id, applicant.Score, applicant.TestTaken);                
             }
         }
     }

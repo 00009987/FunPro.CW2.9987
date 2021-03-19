@@ -54,11 +54,11 @@ namespace FunPro.CW2._9987.DAL
             set
             {
                 // validating input value
-                if (string.IsNullOrWhiteSpace(value))
-                {
+                //if (string.IsNullOrWhiteSpace(value))
+                //{
                     // showing the error message
-                    throw new Exception("Empty test name cannot be added.");
-                }
+                 //   throw new Exception("Empty test name cannot be added.");
+                //}
 
                 // setting value to the variable
                 _testTaken = value;
