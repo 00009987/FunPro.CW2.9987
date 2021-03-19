@@ -34,6 +34,18 @@ namespace FunPro.CW2._9987.DAL
             SqlExecuter(sql);
         }
 
+        // method to update the information of the applicant
+        public void UpdateScore(int id, int score)
+        {
+            // update sql statement to work with database
+            var sql = $"UPDATE Applicants SET " +                
+                $"ap_score_9987 = {score} " +                
+                $"WHERE ap_id_9987 = {id}";
+
+            // calling helper method to execute sql statement
+            SqlExecuter(sql);
+        }
+
         // method to delete an applicant
         public void Delete(int id)
         {

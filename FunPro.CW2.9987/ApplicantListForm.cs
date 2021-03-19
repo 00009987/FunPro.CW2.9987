@@ -106,7 +106,7 @@ namespace FunPro.CW2._9987
             else
             {
                 var applicant = (Applicants)dgv.SelectedRows[0].DataBoundItem;                
-                new TestTake().ShowTests(applicant.Name);                
+                new TestTake().ShowTests(applicant.Name, applicant.Id, applicant.Score);                
             }
         }
     }
