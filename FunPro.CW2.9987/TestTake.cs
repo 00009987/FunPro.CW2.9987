@@ -94,12 +94,9 @@ namespace FunPro.CW2._9987
         }
         
         public void UpdateTakenTest()
-        {            
-            string[] arrTests = applicantTests.Split(' ');
-            List<string> TakenTests = arrTests.OfType<string>().ToList();
-            TakenTests.Add(currentTest);
-            arrTests = TakenTests.ToArray();
-            new ApplicantManager().UpdateTestTaken(applicantId, string.Join(",", arrTests));
+        {
+            applicantTests += currentTest + ", ";
+            new ApplicantManager().UpdateTestTaken(applicantId, applicantTests);            
         }
     }
 }
