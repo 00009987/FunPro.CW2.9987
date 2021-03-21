@@ -20,13 +20,16 @@ namespace FunPro.CW2._9987
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            // closing the form
             Close();
         }
 
+        // referecing Tests and FormMode classes
         public Tests Test { get; set; }
 
         public FormMode Mode { get; set; }
 
+        // method to show the form to create a new test
         public void CreateNewTest()
         {
             Mode = FormMode.CreateNew;
@@ -36,6 +39,7 @@ namespace FunPro.CW2._9987
             Show();
         }
 
+        // method to show the form to update data of the test
         public void UpdateTest(Tests test)
         {
             Mode = FormMode.Update;
@@ -49,6 +53,7 @@ namespace FunPro.CW2._9987
         {
         }
 
+        // method to show the information of the test in the input fields
         private void ShowTestInControls()
         {
             tbxName.Text = Test.TestName;
@@ -60,6 +65,7 @@ namespace FunPro.CW2._9987
             tbxAnswer3.Text = Test.TestQuestion3Answer;
         }
 
+        // method to get the inputs of the user 
         private void GrabUserInput()
         {
             Test.TestName = tbxName.Text;
@@ -73,28 +79,37 @@ namespace FunPro.CW2._9987
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
+            // saving the user inputs
             try
             {
                 GrabUserInput();
-                var manager = new TestManager();                
+                var manager = new TestManager(); 
+
+                // checking if the new test is going to be created 
+                //and test name is not already occupied in the database
                 if (Mode == FormMode.CreateNew && manager.CheckTestName(Test.TestName))
                 {
                     manager.Create(Test);
                 }
+
+                // checking if the test is going to be updated
                 else if(manager.CheckTestName(Test.TestName))
                 {                    
                    manager.Update(Test);
                 }
                 else
                 {
+                    // if something went wrong during the checking process, show the corresponding error
                     MessageBox.Show("This name of the test already exists in the database. Please try another name.");
                 }
-                    
+
+                // loading the list form and closing edit form
                 MyForms.GetForm<TestListForm>().LoadData();
                 Close();
             }
             catch (Exception ex)
             {
+                // if something went wrong during the saving process, show the corresponding error
                 MessageBox.Show(ex.Message);
             }
         }

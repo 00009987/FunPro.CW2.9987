@@ -10,16 +10,17 @@ namespace FunPro.CW2._9987.DAL
     {
         public List<Applicants> GetAllApplicants()
         {
+            // getting all the applicants from database
             return new ApplicantManager().GetAllApplicants();
         }
 
-        public List<Applicants> Sort(ByAttribute attribute)
+        public List<Applicants> Sort()
         {
             // sorting the applicants by score using LINQ
             return GetAllApplicants().OrderBy(applicant => applicant.Score).ToList();        
         }
 
-        public List<Applicants> Search (int id, ByAttribute attribute)
+        public List<Applicants> Search (int id)
         {
             // searching applicants by ID
             return GetAllApplicants().Where(applicant => applicant.Id.Equals(id)).ToList();            

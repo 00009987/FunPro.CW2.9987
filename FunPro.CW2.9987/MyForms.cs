@@ -11,6 +11,7 @@ namespace FunPro.CW2._9987
     {
         public static T GetForm<T>() where T : class, new()
         {
+            // returning the forms according to their type
             return Application.OpenForms.OfType<T>().FirstOrDefault() ?? new T();
         }
 

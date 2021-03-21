@@ -10,6 +10,7 @@ namespace FunPro.CW2._9987.DAL
     {
         public List<Tests> GetAllTests()
         {
+            // getting all the tests from the database
             return new TestManager().GetAllTests();
         }
 

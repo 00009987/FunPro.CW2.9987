@@ -20,6 +20,7 @@ namespace FunPro.CW2._9987
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            // closing the form
             Close();
         }
 
@@ -48,6 +49,7 @@ namespace FunPro.CW2._9987
 
         private void cbxTestName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // changing questions according to the selected test name
             var questions = new TestManager().GetQuestionsAndAnswers(cbxTestName.Text);
             lblQuestion1.Text = questions.TestQuestion1;
             lblQuestion2.Text = questions.TestQuestion2;
@@ -62,7 +64,8 @@ namespace FunPro.CW2._9987
             new ApplicantManager().UpdateScore(applicantId, applicantScore);
 
             // updating taken tests of the user
-            UpdateTakenTest();
+            applicantTests += currentTest + ", ";
+            new ApplicantManager().UpdateTestTaken(applicantId, applicantTests);
 
             // showing how many points user got and refreshing applicant list form
             MessageBox.Show($"You solved {points} questions correctly, and gained {points} points.\n" +
@@ -91,12 +94,6 @@ namespace FunPro.CW2._9987
             }            
 
             return point;
-        }
-        
-        public void UpdateTakenTest()
-        {
-            applicantTests += currentTest + ", ";
-            new ApplicantManager().UpdateTestTaken(applicantId, applicantTests);            
-        }
+        }               
     }
 }
