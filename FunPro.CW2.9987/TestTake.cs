@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FunPro.CW2._9987.DAL;
 
@@ -32,19 +25,21 @@ namespace FunPro.CW2._9987
         
         public void ShowTests(string name, int id, int score, string takenTests)
         {
-            // showing the TestTake form
-            MdiParent = MyForms.GetForm<ParentForm>();
-            // setting user's name to label
-            lblApplicantName.Text = name;  
-            // setting datasource to the test combobox
-            cbxTestName.DataSource = new TestManager().GetAllTests();            
-            Show();
-
             // setting private global variables to the parameters of the test taker
             applicantId = id;
             applicantScore = score;
             applicantTests = takenTests;
             currentTest = cbxTestName.Text;
+
+            // showing the TestTake form
+            MdiParent = MyForms.GetForm<ParentForm>();
+            // setting user's name to label
+            lblApplicantName.Text = name;
+
+            // setting datasource to the test combobox
+            cbxTestName.DataSource = new TestManager().GetAllTests();            
+
+            Show();            
         }
 
         private void cbxTestName_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,6 +49,9 @@ namespace FunPro.CW2._9987
             lblQuestion1.Text = questions.TestQuestion1;
             lblQuestion2.Text = questions.TestQuestion2;
             lblQuestion3.Text = questions.TestQuestion3;
+
+            // seting current test on change
+            currentTest = cbxTestName.Text;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

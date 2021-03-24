@@ -80,11 +80,10 @@ namespace FunPro.CW2._9987
                 MessageBox.Show("Select an attribute to sort by");
             else
             {
-                // sorting the applicants by their score                
-                ByAttribute selectedAttribute = ByAttribute.TestName;
+                // sorting the applicants by their score                                
                 dgv.DataMember = "";
                 dgv.DataSource = null;
-                dgv.DataSource = new TestList().Sort(selectedAttribute);
+                dgv.DataSource = new TestList().Sort();
             }
         }
 

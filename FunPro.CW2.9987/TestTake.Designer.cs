@@ -50,6 +50,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(212, 341);
@@ -62,6 +63,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(131, 341);
             this.btnSave.Name = "btnSave";
@@ -73,6 +75,8 @@
             // 
             // tbxAnswer3
             // 
+            this.tbxAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxAnswer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer3.Location = new System.Drawing.Point(15, 303);
             this.tbxAnswer3.Name = "tbxAnswer3";
@@ -101,6 +105,8 @@
             // 
             // tbxAnswer2
             // 
+            this.tbxAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxAnswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer2.Location = new System.Drawing.Point(15, 219);
             this.tbxAnswer2.Name = "tbxAnswer2";
@@ -129,6 +135,8 @@
             // 
             // tbxAnswer1
             // 
+            this.tbxAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer1.Location = new System.Drawing.Point(15, 138);
             this.tbxAnswer1.Name = "tbxAnswer1";
@@ -157,6 +165,8 @@
             // 
             // cbxTestName
             // 
+            this.cbxTestName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxTestName.DataSource = this.testsBindingSource;
             this.cbxTestName.DisplayMember = "TestName";
             this.cbxTestName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -223,6 +233,7 @@
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.lblApplicantName);
             this.Controls.Add(this.lbl);
+            this.MinimumSize = new System.Drawing.Size(318, 422);
             this.Name = "TestTake";
             this.Text = "TestTake";
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();

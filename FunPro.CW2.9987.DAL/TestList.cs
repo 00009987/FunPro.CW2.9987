@@ -14,7 +14,7 @@ namespace FunPro.CW2._9987.DAL
             return new TestManager().GetAllTests();
         }
 
-        public List<Tests> Sort(ByAttribute attribute)
+        public List<Tests> Sort()
         {
             // sorting the tests by names using LINQ                       
             return GetAllTests().OrderBy(test => test.TestName).ToList();                           
