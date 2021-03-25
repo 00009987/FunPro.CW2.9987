@@ -7,3 +7,12 @@ C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csproj.CopyComplete
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.dll
 C:\Users\user\source\repos\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.pdb
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.dll.config
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.dll
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\FunPro.CW2.9987.DAL.pdb
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\bin\Debug\System.Data.SqlServerCe.dll
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csprojAssemblyReference.cache
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csproj.CoreCompileInputs.cache
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.csproj.CopyComplete
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.dll
+\\peter\ZDrive\00009987\Desktop\FunPro.CW2.9987\FunPro.CW2.9987.DAL\obj\Debug\FunPro.CW2.9987.DAL.pdb

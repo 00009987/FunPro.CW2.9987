@@ -19,10 +19,10 @@ namespace FunPro.CW2._9987.DAL
                 $"ts_q1_9987, ts_q1_answer_9987, " +
                 $"ts_q2_9987, ts_q2_answer_9987, " +
                 $"ts_q3_9987, ts_q3_answer_9987) " +
-                $"VALUES ('{test.TestName}', " +
-                $"'{test.TestQuestion1}', '{test.TestQuestion1Answer}'," +
-                $"'{test.TestQuestion2}', '{test.TestQuestion2Answer}'," +
-                $" '{test.TestQuestion3}', '{test.TestQuestion3Answer}')";
+                $"VALUES ('{test.Name}', " +
+                $"'{test.Question1}', '{test.Answer1}'," +
+                $"'{test.Question2}', '{test.Answer2}'," +
+                $" '{test.Question3}', '{test.Answer3}')";
 
             // calling helper method to execute sql statement
             SqlExecuter(sql);
@@ -33,13 +33,13 @@ namespace FunPro.CW2._9987.DAL
         {
             // update sql statement to work with database
             var sql = $"UPDATE Tests SET " +
-                $"ts_name_9987 = '{test.TestName}', " +
-                $"ts_q1_9987 = '{test.TestQuestion1}', " +
-                $"ts_q1_answer_9987 = '{test.TestQuestion1Answer}', " +
-                $"ts_q2_9987 = '{test.TestQuestion2}'," +
-                $"ts_q2_answer_9987 = '{test.TestQuestion2Answer}', " +
-                $"ts_q3_9987 = '{test.TestQuestion3}', " +
-                $"ts_q3_answer_9987 = '{test.TestQuestion3Answer}' " +
+                $"ts_name_9987 = '{test.Name}', " +
+                $"ts_q1_9987 = '{test.Question1}', " +
+                $"ts_q1_answer_9987 = '{test.Answer1}', " +
+                $"ts_q2_9987 = '{test.Question2}'," +
+                $"ts_q2_answer_9987 = '{test.Answer2}', " +
+                $"ts_q3_9987 = '{test.Question3}', " +
+                $"ts_q3_answer_9987 = '{test.Answer3}' " +
                 $"WHERE ts_id_9987 = {test.Id}";
 
             // calling helper method to execute sql statement
@@ -82,13 +82,13 @@ namespace FunPro.CW2._9987.DAL
                     var t = new Tests
                     {
                         Id = Convert.ToInt32(rdr.GetValue(0)),
-                        TestName = Convert.ToString(rdr.GetValue(1)),
-                        TestQuestion1 = Convert.ToString(rdr.GetValue(2)),
-                        TestQuestion1Answer = Convert.ToString(rdr.GetValue(3)),
-                        TestQuestion2 = Convert.ToString(rdr.GetValue(4)),
-                        TestQuestion2Answer = Convert.ToString(rdr.GetValue(5)),
-                        TestQuestion3 = Convert.ToString(rdr.GetValue(6)),
-                        TestQuestion3Answer = Convert.ToString(rdr.GetValue(7))
+                        Name = Convert.ToString(rdr.GetValue(1)),
+                        Question1 = Convert.ToString(rdr.GetValue(2)),
+                        Answer1 = Convert.ToString(rdr.GetValue(3)),
+                        Question2 = Convert.ToString(rdr.GetValue(4)),
+                        Answer2 = Convert.ToString(rdr.GetValue(5)),
+                        Question3 = Convert.ToString(rdr.GetValue(6)),
+                        Answer3 = Convert.ToString(rdr.GetValue(7))
                     };
 
                     // adding the the to the list
@@ -114,11 +114,11 @@ namespace FunPro.CW2._9987.DAL
         }
 
         // method to check if the test with the same name is tried to be created
-        public Boolean CheckTestName(string name)
+        public Boolean CheckName(string name)
         {
             var conn = Connection;
             // declearing & initializing tests list
-            var testNames = new List<String>();
+            var Names = new List<String>();
 
             try
             {
@@ -134,7 +134,7 @@ namespace FunPro.CW2._9987.DAL
                 {
                     var t = Convert.ToString(rdr.GetValue(0));
                     
-                    testNames.Add(t);
+                    Names.Add(t);
                 }                          
             }
             catch (Exception ex)
@@ -151,7 +151,7 @@ namespace FunPro.CW2._9987.DAL
                 }
             }            
 
-            return !testNames.Contains((name));
+            return !Names.Contains((name));
         }
 
         // method to get questions & answers according to the test name
@@ -178,12 +178,12 @@ namespace FunPro.CW2._9987.DAL
                     // declearing and initializing new test with proper parameters
                     var t = new Tests
                     {                        
-                        TestQuestion1 = Convert.ToString(rdr.GetValue(0)),
-                        TestQuestion1Answer = Convert.ToString(rdr.GetValue(1)),
-                        TestQuestion2 = Convert.ToString(rdr.GetValue(2)),
-                        TestQuestion2Answer = Convert.ToString(rdr.GetValue(3)),
-                        TestQuestion3 = Convert.ToString(rdr.GetValue(4)),
-                        TestQuestion3Answer = Convert.ToString(rdr.GetValue(5))
+                        Question1 = Convert.ToString(rdr.GetValue(0)),
+                        Answer1 = Convert.ToString(rdr.GetValue(1)),
+                        Question2 = Convert.ToString(rdr.GetValue(2)),
+                        Answer2 = Convert.ToString(rdr.GetValue(3)),
+                        Question3 = Convert.ToString(rdr.GetValue(4)),
+                        Answer3 = Convert.ToString(rdr.GetValue(5))
                     };
 
                     return t;

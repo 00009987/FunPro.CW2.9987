@@ -46,9 +46,9 @@ namespace FunPro.CW2._9987
         {
             // changing questions according to the selected test name
             var questions = new TestManager().GetQuestionsAndAnswers(cbxTestName.Text);
-            lblQuestion1.Text = questions.TestQuestion1;
-            lblQuestion2.Text = questions.TestQuestion2;
-            lblQuestion3.Text = questions.TestQuestion3;
+            lblQuestion1.Text = questions.Question1;
+            lblQuestion2.Text = questions.Question2;
+            lblQuestion3.Text = questions.Question3;
 
             // seting current test on change
             currentTest = cbxTestName.Text;
@@ -84,17 +84,17 @@ namespace FunPro.CW2._9987
             var answers = new TestManager().GetQuestionsAndAnswers(cbxTestName.Text);
             int point = 0;
 
-            if(tbxAnswer1.Text == answers.TestQuestion1Answer)
+            if(tbxAnswer1.Text == answers.Answer1)
             {
                 point++;
             }
             
-            if(tbxAnswer2.Text == answers.TestQuestion2Answer)
+            if(tbxAnswer2.Text == answers.Answer2)
             {
                 point++;
             }
             
-            if (tbxAnswer3.Text == answers.TestQuestion3Answer){
+            if (tbxAnswer3.Text == answers.Answer3){
                 point++;
             }                    
 

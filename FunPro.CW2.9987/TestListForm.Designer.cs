@@ -41,15 +41,15 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.cbxSearch = new System.Windows.Forms.ComboBox();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion1AnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion2AnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testQuestion3AnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.question1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.answer1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.question2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.answer2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.question3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.answer3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,20 +58,18 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.AutoGenerateColumns = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.testNameDataGridViewTextBoxColumn,
-            this.testQuestion1DataGridViewTextBoxColumn,
-            this.testQuestion1AnswerDataGridViewTextBoxColumn,
-            this.testQuestion2DataGridViewTextBoxColumn,
-            this.testQuestion2AnswerDataGridViewTextBoxColumn,
-            this.testQuestion3DataGridViewTextBoxColumn,
-            this.testQuestion3AnswerDataGridViewTextBoxColumn});
+            this.nameDataGridViewTextBoxColumn,
+            this.question1DataGridViewTextBoxColumn,
+            this.answer1DataGridViewTextBoxColumn,
+            this.question2DataGridViewTextBoxColumn,
+            this.answer2DataGridViewTextBoxColumn,
+            this.question3DataGridViewTextBoxColumn,
+            this.answer3DataGridViewTextBoxColumn});
             this.dgv.DataSource = this.testsBindingSource;
             this.dgv.Location = new System.Drawing.Point(12, 12);
             this.dgv.MultiSelect = false;
@@ -208,6 +206,10 @@
             this.tbxSearch.Size = new System.Drawing.Size(184, 20);
             this.tbxSearch.TabIndex = 23;
             // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -215,58 +217,54 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testNameDataGridViewTextBoxColumn
+            // nameDataGridViewTextBoxColumn
             // 
-            this.testNameDataGridViewTextBoxColumn.DataPropertyName = "TestName";
-            this.testNameDataGridViewTextBoxColumn.HeaderText = "Test Name";
-            this.testNameDataGridViewTextBoxColumn.Name = "testNameDataGridViewTextBoxColumn";
-            this.testNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion1DataGridViewTextBoxColumn
+            // question1DataGridViewTextBoxColumn
             // 
-            this.testQuestion1DataGridViewTextBoxColumn.DataPropertyName = "TestQuestion1";
-            this.testQuestion1DataGridViewTextBoxColumn.HeaderText = "Question 1";
-            this.testQuestion1DataGridViewTextBoxColumn.Name = "testQuestion1DataGridViewTextBoxColumn";
-            this.testQuestion1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.question1DataGridViewTextBoxColumn.DataPropertyName = "Question1";
+            this.question1DataGridViewTextBoxColumn.HeaderText = "Question1";
+            this.question1DataGridViewTextBoxColumn.Name = "question1DataGridViewTextBoxColumn";
+            this.question1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion1AnswerDataGridViewTextBoxColumn
+            // answer1DataGridViewTextBoxColumn
             // 
-            this.testQuestion1AnswerDataGridViewTextBoxColumn.DataPropertyName = "TestQuestion1Answer";
-            this.testQuestion1AnswerDataGridViewTextBoxColumn.HeaderText = "Answer 1";
-            this.testQuestion1AnswerDataGridViewTextBoxColumn.Name = "testQuestion1AnswerDataGridViewTextBoxColumn";
-            this.testQuestion1AnswerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.answer1DataGridViewTextBoxColumn.DataPropertyName = "Answer1";
+            this.answer1DataGridViewTextBoxColumn.HeaderText = "Answer1";
+            this.answer1DataGridViewTextBoxColumn.Name = "answer1DataGridViewTextBoxColumn";
+            this.answer1DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion2DataGridViewTextBoxColumn
+            // question2DataGridViewTextBoxColumn
             // 
-            this.testQuestion2DataGridViewTextBoxColumn.DataPropertyName = "TestQuestion2";
-            this.testQuestion2DataGridViewTextBoxColumn.HeaderText = "Question 2";
-            this.testQuestion2DataGridViewTextBoxColumn.Name = "testQuestion2DataGridViewTextBoxColumn";
-            this.testQuestion2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.question2DataGridViewTextBoxColumn.DataPropertyName = "Question2";
+            this.question2DataGridViewTextBoxColumn.HeaderText = "Question2";
+            this.question2DataGridViewTextBoxColumn.Name = "question2DataGridViewTextBoxColumn";
+            this.question2DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion2AnswerDataGridViewTextBoxColumn
+            // answer2DataGridViewTextBoxColumn
             // 
-            this.testQuestion2AnswerDataGridViewTextBoxColumn.DataPropertyName = "TestQuestion2Answer";
-            this.testQuestion2AnswerDataGridViewTextBoxColumn.HeaderText = "Answer 2";
-            this.testQuestion2AnswerDataGridViewTextBoxColumn.Name = "testQuestion2AnswerDataGridViewTextBoxColumn";
-            this.testQuestion2AnswerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.answer2DataGridViewTextBoxColumn.DataPropertyName = "Answer2";
+            this.answer2DataGridViewTextBoxColumn.HeaderText = "Answer2";
+            this.answer2DataGridViewTextBoxColumn.Name = "answer2DataGridViewTextBoxColumn";
+            this.answer2DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion3DataGridViewTextBoxColumn
+            // question3DataGridViewTextBoxColumn
             // 
-            this.testQuestion3DataGridViewTextBoxColumn.DataPropertyName = "TestQuestion3";
-            this.testQuestion3DataGridViewTextBoxColumn.HeaderText = "Question 3";
-            this.testQuestion3DataGridViewTextBoxColumn.Name = "testQuestion3DataGridViewTextBoxColumn";
-            this.testQuestion3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.question3DataGridViewTextBoxColumn.DataPropertyName = "Question3";
+            this.question3DataGridViewTextBoxColumn.HeaderText = "Question3";
+            this.question3DataGridViewTextBoxColumn.Name = "question3DataGridViewTextBoxColumn";
+            this.question3DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // testQuestion3AnswerDataGridViewTextBoxColumn
+            // answer3DataGridViewTextBoxColumn
             // 
-            this.testQuestion3AnswerDataGridViewTextBoxColumn.DataPropertyName = "TestQuestion3Answer";
-            this.testQuestion3AnswerDataGridViewTextBoxColumn.HeaderText = "Answer 3";
-            this.testQuestion3AnswerDataGridViewTextBoxColumn.Name = "testQuestion3AnswerDataGridViewTextBoxColumn";
-            this.testQuestion3AnswerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // testsBindingSource
-            // 
-            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
+            this.answer3DataGridViewTextBoxColumn.DataPropertyName = "Answer3";
+            this.answer3DataGridViewTextBoxColumn.HeaderText = "Answer3";
+            this.answer3DataGridViewTextBoxColumn.Name = "answer3DataGridViewTextBoxColumn";
+            this.answer3DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TestListForm
             // 
@@ -298,7 +296,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testQuestion1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testQuestion1AnswerDataGridViewTextBoxColumn;
@@ -306,7 +303,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn testQuestion2AnswerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testQuestion3DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn testQuestion3AnswerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource testsBindingSource;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
@@ -318,5 +314,14 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cbxSearch;
         private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn question1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn answer1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn question2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn answer2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn question3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn answer3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource testsBindingSource;
     }
 }

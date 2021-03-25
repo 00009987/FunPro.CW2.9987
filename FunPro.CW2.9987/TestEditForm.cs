@@ -56,25 +56,25 @@ namespace FunPro.CW2._9987
         // method to show the information of the test in the input fields
         private void ShowTestInControls()
         {
-            tbxName.Text = Test.TestName;
-            tbxQuestion1.Text = Test.TestQuestion1;
-            tbxAnswer1.Text = Test.TestQuestion1Answer;
-            tbxQuestion2.Text = Test.TestQuestion2;
-            tbxAnswer2.Text = Test.TestQuestion2Answer;
-            tbxQuestion3.Text = Test.TestQuestion3;
-            tbxAnswer3.Text = Test.TestQuestion3Answer;
+            tbxName.Text = Test.Name;
+            tbxQuestion1.Text = Test.Question1;
+            tbxAnswer1.Text = Test.Answer1;
+            tbxQuestion2.Text = Test.Question2;
+            tbxAnswer2.Text = Test.Answer2;
+            tbxQuestion3.Text = Test.Question3;
+            tbxAnswer3.Text = Test.Answer3;
         }
 
         // method to get the inputs of the user 
         private void GrabUserInput()
         {
-            Test.TestName = tbxName.Text;
-            Test.TestQuestion1 = tbxQuestion1.Text;
-            Test.TestQuestion1Answer = tbxAnswer1.Text;
-            Test.TestQuestion2 = tbxQuestion2.Text;
-            Test.TestQuestion2Answer = tbxAnswer2.Text;
-            Test.TestQuestion3 = tbxQuestion3.Text;
-            Test.TestQuestion3Answer = tbxAnswer3.Text;
+            Test.Name = tbxName.Text;
+            Test.Question1 = tbxQuestion1.Text;
+            Test.Answer1 = tbxAnswer1.Text;
+            Test.Question2 = tbxQuestion2.Text;
+            Test.Answer2 = tbxAnswer2.Text;
+            Test.Question3 = tbxQuestion3.Text;
+            Test.Answer3 = tbxAnswer3.Text;
         }        
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -87,13 +87,13 @@ namespace FunPro.CW2._9987
 
                 // checking if the new test is going to be created 
                 //and test name is not already occupied in the database
-                if (Mode == FormMode.CreateNew && manager.CheckTestName(Test.TestName))
+                if (Mode == FormMode.CreateNew && manager.CheckName(Test.Name))
                 {
                     manager.Create(Test);
                 }
 
                 // checking if the test is going to be updated
-                else if(manager.CheckTestName(Test.TestName))
+                else if(manager.CheckName(Test.Name))
                 {                    
                    manager.Update(Test);
                 }

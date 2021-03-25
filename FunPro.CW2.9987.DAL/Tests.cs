@@ -10,18 +10,18 @@ namespace FunPro.CW2._9987.DAL
     {
         // declaring global variables
         public int Id { get; set; }
-        private string _testName;
-        private string _testQuestion1;
-        private string _testQuestion1Answer;
-        private string _testQuestion2;
-        private string _testQuestion2Answer;
-        private string _testQuestion3;
-        private string _testQuestion3Answer;
+        private string _name;
+        private string _question1;
+        private string _answer1;
+        private string _question2;
+        private string _answer2;
+        private string _question3;
+        private string _answer3;
 
-        public string TestName
+        public string Name
         {
             // returning test name value
-            get => _testName;
+            get => _name;
             set
             {
                 // validating input value
@@ -31,13 +31,13 @@ namespace FunPro.CW2._9987.DAL
                     throw new Exception("Name cannot be empty.");
                 }
                 // setting value to test name's variable
-                _testName = value;
+                _name = value;
             }
         }
-        public string TestQuestion1
+        public string Question1
         {
             // returning 1st question's value
-            get => _testQuestion1;
+            get => _question1;
             set
             {
                 // validating input value
@@ -48,13 +48,13 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to 1st question's variable
-                _testQuestion1 = value;
+                _question1 = value;
             }
         }
-        public string TestQuestion1Answer
+        public string Answer1
         {
             // returning answer of the 1st question's value
-            get => _testQuestion1Answer;
+            get => _answer1;
             set
             {
                 // validating input value   
@@ -65,13 +65,13 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to answer of the 1st question's variable
-                _testQuestion1Answer = value;
+                _answer1 = value;
             }
         }
-        public string TestQuestion2
+        public string Question2
         {
             // returning the 2nd question's value
-            get => _testQuestion2;
+            get => _question2;
             set
             {
                 // validating input value
@@ -82,13 +82,13 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to the 2nd question's variable
-                _testQuestion2 = value;
+                _question2 = value;
             }
         }
-        public string TestQuestion2Answer
+        public string Answer2
         {
             // returning answer of the 2nd question's value
-            get => _testQuestion2Answer;
+            get => _answer2;
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -97,13 +97,13 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to answer value of the 2nd question's variable
-                _testQuestion2Answer = value;
+                _answer2 = value;
             }
         }
-        public string TestQuestion3
+        public string Question3
         {
             // returning the 3rd question's value
-            get => _testQuestion3;
+            get => _question3;
             set
             {
                 // validating input value
@@ -114,14 +114,14 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to the 3rd question's variable
-                _testQuestion3 = value;
+                _question3 = value;
             }
         }
 
-        public string TestQuestion3Answer
+        public string Answer3
         {
             // returning the 3rd question's value
-            get => _testQuestion3Answer;
+            get => _answer3;
             set
             {
                 // validating input value
@@ -132,7 +132,7 @@ namespace FunPro.CW2._9987.DAL
                 }
 
                 // setting value to answer of the 3rd question's variable
-                _testQuestion3Answer = value;
+                _answer3 = value;
             }
         }
 
@@ -140,39 +140,40 @@ namespace FunPro.CW2._9987.DAL
         public Tests() { }
 
         // declaring constructor with only name var
-        public Tests(string testName)
+        public Tests(string name)
         {
-            TestName = testName;
+            Name = name;
         }
 
         // declaring constructor with 6 parameters
-        public Tests(string testQuestion1, string testQuestion1Answer, string testQuestion2, string testQuestion2Answer, string testQuestion3, string testQuestion3Answer)
+        public Tests(string question1, string answer1, string question2, string answer2, string question3, string answer3)
         {
             // setting received parameters to the variables accordingly            
-            TestQuestion1 = testQuestion1;
-            TestQuestion1Answer = testQuestion1Answer;
-            TestQuestion2 = testQuestion2;
-            TestQuestion2Answer = testQuestion2Answer;
-            TestQuestion3 = testQuestion3;
-            TestQuestion3Answer = testQuestion3Answer;
+            Question1 = question1;
+            Answer1 = answer1;
+            Question2 = question2;
+            Answer2 = answer2;
+            Question3 = question3;
+            Answer3 = answer3;
         }
 
 
         // declaring Tests constuctor with required parameters
-        public Tests(string testName, string testQuestion1, string testQuestion1Answer, string testQuestion2, string testQuestion2Answer, string testQuestion3, string testQuestion3Answer)
+        public Tests(string testName, string question1, string answer1, string question2, string answer2, string question3, string answer3)
         {
             // setting received parameters to the variables accordingly
-            TestName = testName;
-            TestQuestion1 = testQuestion1;
-            TestQuestion1Answer = testQuestion1Answer;
-            TestQuestion2 = testQuestion2;
-            TestQuestion2Answer = testQuestion2Answer;
-            TestQuestion3 = testQuestion3;
-            TestQuestion3Answer = testQuestion3Answer;
+            Name = testName;
+            Question1 = question1;
+            Answer1 = answer1;
+            Question2 = question2;
+            Answer2 = answer2;
+            Question3 = question3;
+            Answer3 = answer3;
         }
+
         public override string ToString()
         {
-            return TestName;
+            return Name;
         }
     }
 }
