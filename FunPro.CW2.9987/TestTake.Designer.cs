@@ -41,10 +41,10 @@
             this.lblQuestion1 = new System.Windows.Forms.Label();
             this.lblQ1 = new System.Windows.Forms.Label();
             this.cbxTestName = new System.Windows.Forms.ComboBox();
-            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTest = new System.Windows.Forms.Label();
             this.lblApplicantName = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +99,7 @@
             this.lblQ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQ3.Location = new System.Drawing.Point(12, 255);
             this.lblQ3.Name = "lblQ3";
-            this.lblQ3.Size = new System.Drawing.Size(81, 16);
+            this.lblQ3.Size = new System.Drawing.Size(84, 16);
             this.lblQ3.TabIndex = 40;
             this.lblQ3.Text = "Question 3";
             // 
@@ -129,7 +129,7 @@
             this.lblQ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQ2.Location = new System.Drawing.Point(12, 171);
             this.lblQ2.Name = "lblQ2";
-            this.lblQ2.Size = new System.Drawing.Size(81, 16);
+            this.lblQ2.Size = new System.Drawing.Size(84, 16);
             this.lblQ2.TabIndex = 37;
             this.lblQ2.Text = "Question 2";
             // 
@@ -159,7 +159,7 @@
             this.lblQ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQ1.Location = new System.Drawing.Point(12, 90);
             this.lblQ1.Name = "lblQ1";
-            this.lblQ1.Size = new System.Drawing.Size(81, 16);
+            this.lblQ1.Size = new System.Drawing.Size(84, 16);
             this.lblQ1.TabIndex = 34;
             this.lblQ1.Text = "Question 1";
             // 
@@ -168,7 +168,7 @@
             this.cbxTestName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxTestName.DataSource = this.testsBindingSource;
-            this.cbxTestName.DisplayMember = "TestName";
+            this.cbxTestName.DisplayMember = "Name";
             this.cbxTestName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTestName.FormattingEnabled = true;
@@ -178,10 +178,6 @@
             this.cbxTestName.TabIndex = 33;
             this.cbxTestName.ValueMember = "Id";
             this.cbxTestName.SelectedIndexChanged += new System.EventHandler(this.cbxTestName_SelectedIndexChanged);
-            // 
-            // testsBindingSource
-            // 
-            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // lblTest
             // 
@@ -199,7 +195,7 @@
             this.lblApplicantName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApplicantName.Location = new System.Drawing.Point(119, 9);
             this.lblApplicantName.Name = "lblApplicantName";
-            this.lblApplicantName.Size = new System.Drawing.Size(49, 16);
+            this.lblApplicantName.Size = new System.Drawing.Size(50, 16);
             this.lblApplicantName.TabIndex = 31;
             this.lblApplicantName.Text = "Name";
             // 
@@ -212,6 +208,10 @@
             this.lbl.Size = new System.Drawing.Size(104, 16);
             this.lbl.TabIndex = 30;
             this.lbl.Text = "Applicant Name";
+            // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // TestTake
             // 

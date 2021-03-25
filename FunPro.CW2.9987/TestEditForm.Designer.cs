@@ -221,7 +221,7 @@
             this.MaximumSize = new System.Drawing.Size(287, 321);
             this.MinimumSize = new System.Drawing.Size(287, 321);
             this.Name = "TestEditForm";
-            this.Text = "TestEditForm";
+            this.Text = "Test";
             this.Load += new System.EventHandler(this.TestEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
