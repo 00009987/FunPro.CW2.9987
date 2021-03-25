@@ -56,19 +56,26 @@ namespace FunPro.CW2._9987
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // checking answers and updating applicant's score
-            int points = CheckAnswers();
-            applicantScore += points;
-            new ApplicantManager().UpdateScore(applicantId, applicantScore);
+            if (string.IsNullOrEmpty(tbxAnswer1.Text) || string.IsNullOrEmpty(tbxAnswer2.Text) || string.IsNullOrEmpty(tbxAnswer3.Text))
+            {
+                MessageBox.Show("Answer input cannot be empty");
+            }
+            else
+            {
+                // checking answers and updating applicant's score
+                int points = CheckAnswers();
+                applicantScore += points;
+                new ApplicantManager().UpdateScore(applicantId, applicantScore);
 
-            // updating taken tests of the user
-            applicantTests += currentTest + ", ";
-            new ApplicantManager().UpdateTestTaken(applicantId, applicantTests);
+                // updating taken tests of the user
+                applicantTests += currentTest + ", ";
+                new ApplicantManager().UpdateTestTaken(applicantId, applicantTests);
 
-            // showing how many points user got and refreshing applicant list form
-            MessageBox.Show($"You solved {points} questions correctly, and gained {points} points.\n" +
-                $"To see the updated information, please click on Refresh.");
-            Close();                 
+                // showing how many points user got and refreshing applicant list form
+                MessageBox.Show($"You solved {points} questions correctly, and gained {points} points.\n\n" +
+                    $"To see the updated information, please click on Refresh.");
+                Close();
+            }            
         }
 
         // method to check answers of the users with the correct ones
@@ -89,9 +96,9 @@ namespace FunPro.CW2._9987
             
             if (tbxAnswer3.Text == answers.TestQuestion3Answer){
                 point++;
-            }            
+            }                    
 
             return point;
-        }               
+        }
     }
 }
