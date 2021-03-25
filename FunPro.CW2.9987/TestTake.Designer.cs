@@ -41,10 +41,10 @@
             this.lblQuestion1 = new System.Windows.Forms.Label();
             this.lblQ1 = new System.Windows.Forms.Label();
             this.cbxTestName = new System.Windows.Forms.ComboBox();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTest = new System.Windows.Forms.Label();
             this.lblApplicantName = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
-            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(212, 341);
+            this.btnCancel.Location = new System.Drawing.Point(508, 341);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 29);
             this.btnCancel.TabIndex = 44;
@@ -65,7 +65,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(131, 341);
+            this.btnSave.Location = new System.Drawing.Point(427, 341);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 29);
             this.btnSave.TabIndex = 43;
@@ -80,7 +80,7 @@
             this.tbxAnswer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer3.Location = new System.Drawing.Point(15, 303);
             this.tbxAnswer3.Name = "tbxAnswer3";
-            this.tbxAnswer3.Size = new System.Drawing.Size(272, 22);
+            this.tbxAnswer3.Size = new System.Drawing.Size(568, 22);
             this.tbxAnswer3.TabIndex = 42;
             // 
             // lblQuestion3
@@ -110,7 +110,7 @@
             this.tbxAnswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer2.Location = new System.Drawing.Point(15, 219);
             this.tbxAnswer2.Name = "tbxAnswer2";
-            this.tbxAnswer2.Size = new System.Drawing.Size(272, 22);
+            this.tbxAnswer2.Size = new System.Drawing.Size(568, 22);
             this.tbxAnswer2.TabIndex = 39;
             // 
             // lblQuestion2
@@ -140,7 +140,7 @@
             this.tbxAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAnswer1.Location = new System.Drawing.Point(15, 138);
             this.tbxAnswer1.Name = "tbxAnswer1";
-            this.tbxAnswer1.Size = new System.Drawing.Size(272, 22);
+            this.tbxAnswer1.Size = new System.Drawing.Size(568, 22);
             this.tbxAnswer1.TabIndex = 36;
             // 
             // lblQuestion1
@@ -174,10 +174,14 @@
             this.cbxTestName.FormattingEnabled = true;
             this.cbxTestName.Location = new System.Drawing.Point(122, 43);
             this.cbxTestName.Name = "cbxTestName";
-            this.cbxTestName.Size = new System.Drawing.Size(165, 24);
+            this.cbxTestName.Size = new System.Drawing.Size(461, 24);
             this.cbxTestName.TabIndex = 33;
             this.cbxTestName.ValueMember = "Id";
             this.cbxTestName.SelectedIndexChanged += new System.EventHandler(this.cbxTestName_SelectedIndexChanged);
+            // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
             // 
             // lblTest
             // 
@@ -209,15 +213,11 @@
             this.lbl.TabIndex = 30;
             this.lbl.Text = "Applicant Name";
             // 
-            // testsBindingSource
-            // 
-            this.testsBindingSource.DataSource = typeof(FunPro.CW2._9987.DAL.Tests);
-            // 
             // TestTake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 383);
+            this.ClientSize = new System.Drawing.Size(598, 383);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tbxAnswer3);
@@ -233,9 +233,9 @@
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.lblApplicantName);
             this.Controls.Add(this.lbl);
-            this.MinimumSize = new System.Drawing.Size(318, 422);
+            this.MinimumSize = new System.Drawing.Size(614, 422);
             this.Name = "TestTake";
-            this.Text = "TestTake";
+            this.Text = "Take Test";
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
